@@ -22,7 +22,7 @@ const Home = () => {
 				<Typography className="intro-text" variant="h1">
 					I'm a <strong>Frontend</strong>
 					<Typist.Backspace count={8} delay={300} />
-					<strong>UI/UX Designer</strong>
+					<strong>UI/UX</strong>
 					<Typist.Backspace count={7} delay={300} />
 					<strong>Full Stack Developer</strong> from Lagos, Nigeria.
 				</Typography>
