@@ -1,0 +1,37 @@
+.link {
+	text-decoration: underline !important;
+	font-size: 2.2rem !important;
+	color: #3625ba !important;
+	font-style: italic;
+}
+
+.link:hover {
+	background-color: #3625ba;
+	color: white !important;
+	font-style: italic;
+}
+
+.work-title {
+	display: list-item;
+	font-family: inherit !important;
+	font-size: 2rem !important;
+	padding: 1vh;
+	padding-bottom: 1.5vh !important;
+	letter-spacing: 0.04em !important;
+}
+
+@media screen and (max-width: 640px) {
+	.work-title {
+		padding-top: 5vh;
+		font-family: inherit !important;
+		font-size: 3em !important;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.work-title {
+		padding-top: 5vh;
+		font-family: inherit !important;
+		font-size: 2.5em !important;
+	}
+}

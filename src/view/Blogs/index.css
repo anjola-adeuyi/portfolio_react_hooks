@@ -1,0 +1,24 @@
+.blog-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-ms-flex-line-pack: distribute;
+	align-content: space-around;
+	padding-top: 10vh;
+}
+
+@media screen and (max-width: 640px) {
+	.blog-container {
+		padding-top: 7.5vh;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.blog-container {
+		padding-top: 5vh;
+	}
+}

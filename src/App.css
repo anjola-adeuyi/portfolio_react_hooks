@@ -1,0 +1,257 @@
+.cn-wrapper {
+	font-size: 2em;
+	width: 52em;
+	height: 52.5em;
+	overflow: hidden;
+	position: fixed;
+	z-index: 10;
+	bottom: -39em;
+	left: 50%;
+	border-radius: 50%;
+	margin-left: -26em;
+	-webkit-transform: scale(0.1);
+	transform: scale(0.1);
+	pointer-events: none;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.opened-nav {
+	border-radius: 50%;
+	pointer-events: auto;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.cn-overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	z-index: 2;
+}
+
+.cn-overlay.on-overlay {
+	visibility: visible;
+	opacity: 1;
+}
+
+.cn-home {
+	outline: none;
+	border: none;
+	text-align: center;
+	font-size: 3.15em;
+	height: 6.125em;
+	width: 6.125em;
+	position: fixed;
+	left: 50%;
+	margin-left: -3.0625em;
+	bottom: -3.0625em;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 11;
+	background-color: #00ffff;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-webkit-animation: ripple 0.75s linear infinite;
+	animation: ripple 0.75s linear infinite;
+}
+
+@-webkit-keyframes ripple {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.5),
+			0 0 0 1em rgba(0, 255, 255, 0.5);
+		box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.5), 0 0 0 1em rgba(0, 255, 255, 0.5);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 1em rgba(0, 255, 255, 0.5),
+			0 0 0 3em rgba(0, 255, 255, 0);
+		box-shadow: 0 0 0 1em rgba(0, 255, 255, 0.5), 0 0 0 3em rgba(0, 255, 255, 0);
+	}
+}
+
+@keyframes ripple {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.5),
+			0 0 0 1em rgba(0, 255, 255, 0.5);
+		box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.5), 0 0 0 1em rgba(0, 255, 255, 0.5);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 1em rgba(0, 255, 255, 0.5),
+			0 0 0 3em rgba(0, 255, 255, 0);
+		box-shadow: 0 0 0 1em rgba(0, 255, 255, 0.5), 0 0 0 3em rgba(0, 255, 255, 0);
+	}
+}
+
+.cn-home:hover {
+	background-color: #00ffff;
+	-webkit-animation: 0;
+	animation: 0;
+}
+
+.cn-home-no-ripple {
+	-webkit-animation: 0;
+	animation: 0;
+}
+
+.pointer {
+	cursor: auto !important;
+}
+
+.cn-wrapper li {
+	position: absolute;
+	font-size: 1.5em;
+	width: 10em;
+	height: 10em;
+	-webkit-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	overflow: hidden;
+	left: 50%;
+	top: 50%;
+	margin-top: -1.3em;
+	margin-left: -10em;
+	-webkit-transition: border 0.3s ease;
+	transition: border 0.3s ease;
+}
+
+.cn-wrapper li div {
+	display: block;
+	font-size: 1.18em;
+	height: 14.5em;
+	width: 14.5em;
+	position: absolute;
+	bottom: -7.25em;
+	right: -7.25em;
+	border-radius: 50%;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+	padding-top: 0.3em;
+	text-align: center;
+	-webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
+	transform: skew(-50deg) rotate(-70deg) scale(1);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: opacity 0.3s, color 0.3s;
+	transition: opacity 0.3s, color 0.3s;
+}
+
+#blogs {
+	font-size: 0.75em;
+	display: inline-block;
+	-webkit-transform: rotate(80deg) translateX(1em);
+	transform: rotate(80deg) translateX(1em);
+}
+
+#skills {
+	font-size: 0.75em;
+	display: inline-block;
+	-webkit-transform: rotate(40deg) translate(0.5em, 0.5em);
+	transform: rotate(40deg) translate(0.5em, 0.5em);
+}
+
+#projects {
+	font-size: 0.75em;
+	display: inline-block;
+}
+
+#experience {
+	font-size: 0.75em;
+	display: inline-block;
+	-webkit-transform: rotate(-40deg) translate(-0.5em, 0.5em);
+	transform: rotate(-40deg) translate(-0.4em, 0.5em);
+}
+
+#contact {
+	font-size: 0.75em;
+	display: inline-block;
+	-webkit-transform: rotate(-80deg) translateX(-1.2em);
+	transform: rotate(-80deg) translateX(-1.2em);
+}
+
+/* for div central angle x, the list items must be skewed by 90-x degrees
+in our case x=40deg so skew angle is 50deg
+items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
+
+.cn-wrapper li:first-child {
+	-webkit-transform: rotate(-10deg) skew(50deg);
+	transform: rotate(-10deg) skew(50deg);
+}
+
+.cn-wrapper li:nth-child(2) {
+	-webkit-transform: rotate(30deg) skew(50deg);
+	transform: rotate(30deg) skew(50deg);
+}
+
+.cn-wrapper li:nth-child(3) {
+	-webkit-transform: rotate(70deg) skew(50deg);
+	transform: rotate(70deg) skew(50deg);
+}
+
+.cn-wrapper li:nth-child(4) {
+	-webkit-transform: rotate(110deg) skew(50deg);
+	transform: rotate(110deg) skew(50deg);
+}
+
+.cn-wrapper li:nth-child(5) {
+	-webkit-transform: rotate(150deg) skew(50deg);
+	transform: rotate(150deg) skew(50deg);
+}
+
+.cn-wrapper li:nth-child(odd) div {
+	background-color: #3121a7;
+}
+
+.cn-wrapper li:nth-child(even) div {
+	background-color: #3b28cc;
+}
+
+/* active style */
+.cn-wrapper li.active div {
+	background-color: #3625ba;
+}
+
+/* hover style */
+.cn-wrapper li:not(.active) div:hover,
+.cn-wrapper li:not(.active) div:active,
+.cn-wrapper li:not(.active) div:focus {
+	background-color: #7370ca;
+	border: 5px solid #00ffff;
+}
+.cn-wrapper li:not(.active) div:focus {
+	position: fixed;
+}
+
+@media screen and (max-width: 520px) {
+	.cn-wrapper {
+		font-size: 1.2em;
+	}
+
+	.cn-home {
+		font-size: 2em;
+	}
+
+	.cn-wrapper li {
+		font-size: 1.52em;
+	}
+}
+
+@media screen and (max-width: 310px) {
+	.cn-wrapper {
+		width: 15.15px;
+		margin-left: -7.5em;
+	}
+
+	.cn-wrapper li {
+		height: 3em;
+		width: 3em;
+	}
+}

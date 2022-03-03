@@ -1,0 +1,60 @@
+.contact-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-ms-flex-line-pack: distribute;
+	align-content: space-around;
+	padding-top: 20vh;
+}
+
+.contact-logo {
+	margin-top: 5vh;
+	height: 100px;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.contact-logo:hover {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+	.contact-logo {
+		margin-top: 5vh;
+		height: 60px;
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.contact-logo {
+		margin-top: 2vh;
+		height: 75px;
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+	.contact-logo:hover {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.contact-logo {
+		height: 80px;
+		margin-top: 0;
+		padding: 10px 5vw;
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+	.contact-logo:hover {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+}

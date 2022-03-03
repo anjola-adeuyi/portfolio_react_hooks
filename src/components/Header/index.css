@@ -1,0 +1,10 @@
+.title {
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	text-align: center;
+	font-family: inherit !important;
+	font-weight: 700 !important;
+	color: white;
+	-webkit-text-decoration: underline #6c4cd4 solid;
+	text-decoration: underline #8583ce solid;
+}

@@ -1,0 +1,120 @@
+.card {
+	border: 1px solid black;
+	border-radius: 20px !important;
+	-webkit-box-shadow: 2px 2px 16px 8px rgba(0, 0, 0, 0.4) !important;
+	box-shadow: 2px 2px 16px 8px rgba(0, 0, 0, 0.4) !important;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 10vh;
+	-webkit-transition: all 0.2s ease-in-out !important;
+	transition: all 0.2s ease-in-out !important;
+}
+
+.even {
+	-webkit-animation: fadeInDown 0.5s linear 1;
+	animation: fadeInDown 0.5s linear 1;
+}
+
+.odd {
+	-webkit-animation: fadeInUp 0.5s linear 1;
+	animation: fadeInUp 0.5s linear 1;
+}
+
+@-webkit-keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@-webkit-keyframes fadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.stack {
+	margin-bottom: 2vh !important;
+	color: black !important;
+	font-size: 1.6em !important;
+}
+
+.skill {
+	max-width: 220px;
+	min-height: 250px;
+}
+
+.project {
+	max-width: 280px;
+	min-height: 400px;
+}
+
+.blog {
+	max-width: 275px;
+	min-height: 400px;
+}
+
+.card:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.card-image {
+	-o-object-fit: contain !important;
+	object-fit: contain !important;
+}
+
+.card-content {
+	padding: 16px;
+	text-align: center;
+	padding-top: 8px !important;
+	padding-bottom: 16px !important;
+	border-top: 2px solid gray;
+}
+
+.card-name {
+	text-align: center;
+}
